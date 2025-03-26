@@ -1,34 +1,34 @@
-Move Project
-Description
-The Move Project is a dynamic and innovative solution that leverages blockchain technology to enable secure, transparent, and efficient transactions. The project aims to simplify complex processes while maintaining scalability and ensuring that every step is traceable and auditable. Built with modern development tools and frameworks, the Move Project sets a new standard in decentralized applications, offering users a seamless and intuitive experience. The project focuses on integrating a smart contract layer with decentralized protocols to enable trustless interactions and enhanced security.
+# Fractional NFT Staking
 
-Vision
-Our vision is to create a robust, secure, and scalable platform that empowers individuals and businesses by automating and simplifying transactions on the blockchain. By adopting cutting-edge technologies, we aim to build a trustless ecosystem that promotes transparency and efficiency, providing both individuals and organizations with a decentralized infrastructure for a better future.
+## Description
+Fractional NFT Staking is a smart contract built on the Aptos blockchain using Move. This contract allows NFT owners to create staking pools where users can stake AptosCoin. It enables fractionalized ownership and utility of NFTs by allowing multiple users to contribute funds toward a shared NFT stake.
 
-Future Scope
-The future of the Move Project is incredibly promising, with several exciting opportunities for growth and development:
+## Vision
+The goal of this project is to enable a decentralized and transparent mechanism for NFT staking, increasing liquidity and engagement in NFT-based ecosystems. By allowing fractional staking, this contract lowers the entry barrier for users who want to participate in NFT ownership and staking rewards.
 
-Cross-Chain Compatibility: Expand the project’s ability to integrate with multiple blockchain networks, increasing its reach and accessibility.
+## Future Scope
+- **Reward Distribution**: Implementing reward mechanisms for stakers based on their contribution.
+- **Unstaking Mechanism**: Allow users to withdraw their staked assets.
+- **Multi-Token Support**: Expanding staking functionality to support multiple tokens.
+- **Governance Mechanism**: Allowing NFT stakeholders to vote on NFT-related decisions.
 
-Enhanced Security Features: Incorporate more advanced encryption and security measures to safeguard users' data and transactions.
+## Contract Details
+### Module: `MyModule::FractionalNFTStaking`
 
-AI Integration: Implement AI-powered solutions for better decision-making and predictive analytics, optimizing the use of smart contracts and blockchain functionalities.
+#### Structs:
+- **StakePool**: Represents an NFT stake pool with:
+  - `total_staked`: Total amount staked.
+  - `nft_owner`: Address of the NFT owner.
 
-Decentralized Finance (DeFi): Introduce DeFi features, such as lending, staking, and yield farming, within the project’s ecosystem.
+#### Functions:
+1. **`create_pool(owner: &signer)`**
+   - Creates a staking pool for an NFT.
+   - Stores `total_staked` as `0` and assigns the `nft_owner`.
 
-User Experience Improvements: Constantly refine the user interface and experience to ensure it is simple, efficient, and accessible to both beginners and experts.
+2. **`stake_tokens(staker: &signer, pool_owner: address, amount: u64) acquires StakePool`**
+   - Allows users to stake AptosCoin into the pool.
+   - Transfers coins from the staker to the pool owner.
+   - Updates the total staked amount in the pool.
 
-Contract Details
-The Move Project smart contracts are developed using the Move programming language, which ensures that they are efficient, secure, and easy to audit. These contracts are deployed on the blockchain and can be interacted with directly by users and other smart contracts.
+This contract serves as a foundation for NFT-based staking mechanisms on Aptos, with potential for further enhancements and integrations.
 
-Key contract details include:
-
-Smart Contract Address: [Add Contract Address Here]
-
-Network: [Mainnet/Testnet/Other Blockchain Network]
-
-Audit: The smart contracts have been audited by [Insert Auditing Company/Group], ensuring their safety and compliance with best practices.
-
-Version: [Insert Version]
-
-Please refer to the documentation for detailed information on how to interact with the smart contracts, including deployment and usage guides.
