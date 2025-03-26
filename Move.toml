@@ -1,0 +1,15 @@
+[package]
+name = "defi-app"
+version = "1.0.0"
+authors = []
+
+[addresses]
+MyModule = "0xb26779ac1d328959fb0284d0c955e351dd184802ddcdc39d12d5341bd4301cf3"
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-framework.git"
+rev = "mainnet"
+subdir = "aptos-framework"
+
+[dev-dependencies]
