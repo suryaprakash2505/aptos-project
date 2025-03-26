@@ -29,6 +29,8 @@ The goal of this project is to enable a decentralized and transparent mechanism 
    - Allows users to stake AptosCoin into the pool.
    - Transfers coins from the staker to the pool owner.
    - Updates the total staked amount in the pool.
+   - contract addres : "0xd3fb6574d64996f8d19b4d55ee964c55f5663dcf204596ee938d3cd34a28c8e6"
+![image](https://github.com/user-attachments/assets/8f0f89e7-01a7-4395-8dfa-01c2bfd17cb9)
 
 This contract serves as a foundation for NFT-based staking mechanisms on Aptos, with potential for further enhancements and integrations.
 
